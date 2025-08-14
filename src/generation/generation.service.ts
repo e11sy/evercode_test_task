@@ -11,7 +11,7 @@ export class GenerationService {
   ) {}
 
   async generate(): Promise<Generation> {
-    const value = Math.floor(Math.random() * 1000) + 1;
+    const value = Math.floor(Math.random() * 999) + 1;
     const generation = this.generationRepo.create({ value });
     return this.generationRepo.save(generation);
   }
